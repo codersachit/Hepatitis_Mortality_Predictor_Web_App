@@ -377,34 +377,34 @@ def main():
 					model_choice = st.selectbox("Select Model",["LR","KNN","DecisionTree"])
 					if st.button("Predict"):
 						if model_choice == "KNN":
-							loaded_model = load_model("models/knn_model.pkl")
+							loaded_model = load_model("models/knn_model.pkl, compile=false")
 							prediction = loaded_model.predict(single_sample)
 							pred_prob = loaded_model.predict_proba(single_sample)
 						elif model_choice == "DecisionTree":
-							loaded_model = load_model("models/decision_tree_model.pkl")
+							loaded_model = load_model("models/decision_tree_model.pkl, compile=false")
 							prediction = loaded_model.predict(single_sample)
 							pred_prob = loaded_model.predict_proba(single_sample)
 						else:
-							loaded_model = load_model("models/logistic_regression_model.pkl")
+							loaded_model = load_model("models/logistic_regression_model.pkl, compile=false")
 							prediction = loaded_model.predict(single_sample)
 							pred_prob = loaded_model.predict_proba(single_sample)
 
-						# st.write(prediction)
-						# prediction_label = {"Die":1,"Live":2}
-						# final_result = get_key(prediction,prediction_label)
-						#if prediction == 1:
-						#	st.warning("Patient Dies")
-						#	pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
-						#	st.subheader("Prediction Probability Score using {}".format(model_choice))
-						#	st.json(pred_probability_score)
-						#	st.subheader("Prescriptive Analytics")
-						#	st.markdown(prescriptive_message_temp,unsafe_allow_html=True)
+						 st.write(prediction)
+						 prediction_label = {"Die":1,"Live":2}
+						 final_result = get_key(prediction,prediction_label)
+						if prediction == 1:
+							st.warning("Patient Dies")
+							pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
+							st.subheader("Prediction Probability Score using {}".format(model_choice))
+							st.json(pred_probability_score)
+							st.subheader("Prescriptive Analytics")
+							st.markdown(prescriptive_message_temp,unsafe_allow_html=True)
 							
-						#else:
-						#	st.success("Patient Lives")
-						#	pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
-						#	st.subheader("Prediction Probability Score using {}".format(model_choice))
-						#	st.json(pred_probability_score)
+						else:
+							st.success("Patient Lives")
+							pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
+							st.subheader("Prediction Probability Score using {}".format(model_choice))
+							st.json(pred_probability_score)
 							
 
 			else:
