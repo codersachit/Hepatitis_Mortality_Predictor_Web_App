@@ -8,5 +8,4 @@ matplotlib.pyplot
 os 
 joblib 
 hashlib
-Image
 sqlite3
