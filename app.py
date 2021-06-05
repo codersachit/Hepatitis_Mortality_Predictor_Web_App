@@ -389,9 +389,9 @@ def main():
 							prediction = loaded_model.predict(single_sample)
 							pred_prob = loaded_model.predict_proba(single_sample)
 
-						 st.write(prediction)
-						 prediction_label = {"Die":1,"Live":2}
-						 final_result = get_key(prediction,prediction_label)
+						 #st.write(prediction)
+						 #prediction_label = {"Die":1,"Live":2}
+						 #final_result = get_key(prediction,prediction_label)
 						if prediction == 1:
 							st.warning("Patient Dies")
 							pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
