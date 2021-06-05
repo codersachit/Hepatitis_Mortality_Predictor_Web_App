@@ -392,19 +392,19 @@ def main():
 						# st.write(prediction)
 						# prediction_label = {"Die":1,"Live":2}
 						# final_result = get_key(prediction,prediction_label)
-						if prediction == 1:
-							st.warning("Patient Dies")
-							pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
-							st.subheader("Prediction Probability Score using {}".format(model_choice))
-							st.json(pred_probability_score)
-							st.subheader("Prescriptive Analytics")
-							st.markdown(prescriptive_message_temp,unsafe_allow_html=True)
+						#if prediction == 1:
+						#	st.warning("Patient Dies")
+						#	pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
+						#	st.subheader("Prediction Probability Score using {}".format(model_choice))
+						#	st.json(pred_probability_score)
+						#	st.subheader("Prescriptive Analytics")
+						#	st.markdown(prescriptive_message_temp,unsafe_allow_html=True)
 							
-						else:
-							st.success("Patient Lives")
-							pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
-							st.subheader("Prediction Probability Score using {}".format(model_choice))
-							st.json(pred_probability_score)
+						#else:
+						#	st.success("Patient Lives")
+						#	pred_probability_score = {"Die":pred_prob[0][0]*100,"Live":pred_prob[0][1]*100}
+						#	st.subheader("Prediction Probability Score using {}".format(model_choice))
+						#	st.json(pred_probability_score)
 							
 
 			else:
