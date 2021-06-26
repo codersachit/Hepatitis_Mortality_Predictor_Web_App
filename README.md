@@ -13,20 +13,4 @@
 
 
 
-#### Screenshot
-![](images/ml_streamlit_app01.png)
 
-
-
-![](images/ml_streamlit_app02.png)
-
-
-
-![](images/ml_streamlit_app03.png)
-
-
-
-
-#### .
-+ Jesus Saves @JCharisTech
-+ By Jesse E.Agbe(JCharis)
